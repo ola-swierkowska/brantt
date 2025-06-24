@@ -1,0 +1,111 @@
+@use 'sass:math';
+
+//
+// MIXINS
+//
+$norm_vw: 1920;
+$min_vw: 1200;
+$max_vw: 2690;
+
+$norm_vw_m: 430;
+$min_vw_m: 320;
+$max_vw_m: 1200;
+
+@function rem($sizeValue: 16) {
+  @return calc($sizeValue / 16) + rem;
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@mixin object-fit-cover() {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@mixin full-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// @function fluid-d($value, $min) {
+//   $vw: calc($value / $norm_vw);
+
+//   @return clamp(
+//     rem(calc($vw * $min)),
+//     calc($vw * 100vw),
+//     rem(calc($vw * $max_vw))
+//   );
+// }
+@function fluid-d($value, $min-key: 'xl') {
+  $min: map-get($grid-breakpoints, $min-key);
+
+  @if $min == null {
+    @error "Breakpoint `#{$min-key}` is not defined in `$grid-breakpoints`.";
+  }
+
+  @if type-of($min) == 'number' and math.unit($min) == 'px' {
+    $min: strip-unit($min);
+  }
+
+  $vw: $value / $norm_vw;
+  $min-rem: rem(calc($vw * $min));
+  $max-rem: rem(calc($vw * $max_vw));
+
+  @return clamp($min-rem, calc($vw * 100vw), $max-rem);
+}
+
+@function fluid-m($value) {
+  $vw: calc($value / $norm_vw_m);
+
+  @return clamp(
+    rem(calc($vw * $min_vw_m)),
+    calc($vw * 100vw),
+    rem(calc($vw * $max_vw_m))
+  );
+}
+
+@function clamp-calc(
+  $min-width,
+  $max-width,
+  $size-at-min-width,
+  $size-at-max-width
+) {
+  $slope: math.div(
+      $size-at-max-width - $size-at-min-width,
+      $max-width - $min-width
+    )
+    or
+    calc(($size-at-max-width - $size-at-min-width) / ($max-width - $min-width));
+  $y-axis-intersection: -1 * $min-width * $slope + $size-at-min-width;
+  $return-value: clamp(
+    #{$size-at-min-width},
+    #{$y-axis-intersection} + #{$slope} * 100vw,
+    #{$size-at-max-width}
+  );
+
+  @return $return-value;
+}
+
+// Helper mixin for variable fonts
+@mixin variablefont($family, $src, $weight: normal, $style: normal) {
+  @font-face {
+    font-display: auto;
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    src:
+      url('#{$src}.woff2') format('woff2'),
+      url('#{$src}.woff') format('woff');
+  }
+}
