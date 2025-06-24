@@ -18,19 +18,19 @@
   }
 }
 
-.is-root-container,
-.acf-block-preview .block,
-body:not(.wp-admin) {
-  color: var(--color-paragraph);
-  font-family: var(--typography-family-paragraph);
-  font-size: var(--typography-paragraph-size);
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-weight: var(--typography-weight-paragraph);
-  line-height: var(--typography-paragraph-line-height);
-  // stylelint-disable-next-line value-keyword-case
-  text-rendering: geometricPrecision;
-}
+// .is-root-container,
+// .acf-block-preview .block,
+// body:not(.wp-admin) {
+//   color: var(--color-paragraph);
+//   font-family: var(--typography-family-paragraph);
+//   font-size: var(--typography-paragraph-size);
+//   -moz-osx-font-smoothing: grayscale;
+//   -webkit-font-smoothing: antialiased;
+//   font-weight: var(--typography-weight-paragraph);
+//   line-height: var(--typography-paragraph-line-height);
+//   // stylelint-disable-next-line value-keyword-case
+//   text-rendering: geometricPrecision;
+// }
 
 // Default structural element
 .block {

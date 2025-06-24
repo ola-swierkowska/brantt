@@ -46,6 +46,7 @@
 // stylelint-disable-next-line
 .editor-styles-wrapper {
   // Import typography related styles inside blocks
+  @import '../helpers/mixins';
   @import '../layout/typography';
 
   // Import gravity forms inside Gutenberg editor

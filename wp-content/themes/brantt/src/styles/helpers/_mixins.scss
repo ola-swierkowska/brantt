@@ -12,7 +12,7 @@ $min_vw_m: 320;
 $max_vw_m: 1200;
 
 @function rem($sizeValue: 16) {
-  @return calc($sizeValue / 16) + rem;
+  @return ($sizeValue / 16) * 1rem;
 }
 
 @function strip-unit($number) {
