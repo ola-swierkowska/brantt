@@ -3,10 +3,15 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
   ...defaultConfig,
+    externals: { 
+    '@wordpress/blocks': 'wp.blocks',
+    '@wordpress/block-editor': 'wp.blockEditor' 
+  },
   entry: {
     index: './src/index.js',    // front-end
     editor: './src/gutenberg-editor.js',  // editor
     admin: './src/admin.js',  // admin
+    'block-recent-posts': './template-parts/blocks/recent-posts/index.js',
   },
     plugins: [
     ...defaultConfig.plugins,
@@ -21,5 +26,6 @@ module.exports = {
       notify: false,
     }),
   ],
+
 };
 
