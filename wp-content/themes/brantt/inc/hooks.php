@@ -44,6 +44,7 @@ add_filter( 'use_block_editor_for_post_type', __NAMESPACE__ . '\use_block_editor
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\register_block_editor_assets' );
 add_filter( 'block_editor_settings_all', __NAMESPACE__ . '\remove_gutenberg_inline_styles', 10, 2 );
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\block_editor_title_input_styles' );
+add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\enqueue_admin_script', 10, 2 );
 
 /**
  * ACF blocks

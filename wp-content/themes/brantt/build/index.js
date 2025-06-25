@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/moveto/dist/moveTo.js":
@@ -8,6 +7,7 @@
   \********************************************/
 /***/ ((module) => {
 
+"use strict";
 /*!
  * MoveTo - A lightweight scroll animation javascript library without any dependency.
  * Version 1.8.2 (28-06-2019 14:30)
@@ -244,6 +244,7 @@ if (true) {
   \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ reframe)
@@ -308,71 +309,13 @@ function reframe(target, cName) {
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.scss */ "./src/styles/style.scss");
-/* harmony import */ var _styles_gutenberg_editor_styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/gutenberg-editor-styles.scss */ "./src/styles/gutenberg-editor-styles.scss");
-/* harmony import */ var reframe_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reframe.js */ "./node_modules/reframe.js/dist/reframe.es.js");
-/* harmony import */ var _scripts_modules_external_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/modules/external-link */ "./src/scripts/modules/external-link.js");
-/* harmony import */ var _scripts_modules_anchors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/modules/anchors */ "./src/scripts/modules/anchors.js");
-/* harmony import */ var _scripts_modules_top__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scripts/modules/top */ "./src/scripts/modules/top.js");
-/* harmony import */ var _scripts_modules_a11y_skip_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./scripts/modules/a11y-skip-link */ "./src/scripts/modules/a11y-skip-link.js");
-/* harmony import */ var _scripts_modules_a11y_focus_search_field__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./scripts/modules/a11y-focus-search-field */ "./src/scripts/modules/a11y-focus-search-field.js");
-/* harmony import */ var _scripts_modules_navigation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./scripts/modules/navigation */ "./src/scripts/modules/navigation.js");
-/* eslint-disable max-len, no-param-reassign, no-unused-vars */
-/**
- * Air theme JavaScript.
- */
-
-
-
-// Import modules
-
-
-
-
-
-
-
-
-// Define Javascript is active by changing the body class
-document.body.classList.remove('no-js');
-document.body.classList.add('js');
-document.addEventListener('DOMContentLoaded', () => {
-  (0,_scripts_modules_anchors__WEBPACK_IMPORTED_MODULE_4__["default"])();
-  (0,_scripts_modules_top__WEBPACK_IMPORTED_MODULE_5__["default"])();
-  (0,_scripts_modules_external_link__WEBPACK_IMPORTED_MODULE_3__.styleExternalLinks)();
-  (0,_scripts_modules_external_link__WEBPACK_IMPORTED_MODULE_3__.initExternalLinkLabels)();
-  (0,_scripts_modules_a11y_skip_link__WEBPACK_IMPORTED_MODULE_6__["default"])();
-  (0,_scripts_modules_a11y_focus_search_field__WEBPACK_IMPORTED_MODULE_7__["default"])();
-
-  // Init navigation
-  // If you want to enable click based navigation, comment navDesktop() and uncomment navClick()
-  // Remember to enable styles in sass/navigation/navigation.scss
-  (0,_scripts_modules_navigation__WEBPACK_IMPORTED_MODULE_8__.navDesktop)();
-  // navClick();
-  (0,_scripts_modules_navigation__WEBPACK_IMPORTED_MODULE_8__.navMobile)();
-
-  // Uncomment if you like to use a sticky navigation
-  // navSticky();
-
-  // Fit video embeds to container
-  (0,reframe_js__WEBPACK_IMPORTED_MODULE_2__["default"])('.wp-has-aspect-ratio iframe');
-});
-
-/***/ }),
-
 /***/ "./src/scripts/modules/a11y-focus-search-field.js":
 /*!********************************************************!*\
   !*** ./src/scripts/modules/a11y-focus-search-field.js ***!
   \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -399,6 +342,7 @@ const initA11yFocusSearchField = () => {
   \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -435,6 +379,7 @@ const initA11ySkipLink = () => {
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -515,6 +460,7 @@ const initAnchors = () => {
   \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   getChildAltText: () => (/* binding */ getChildAltText),
@@ -634,6 +580,7 @@ function initExternalLinkLabels() {
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ getLocalization)
@@ -655,6 +602,7 @@ function getLocalization(stringKey) {
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   navClick: () => (/* binding */ navClick),
@@ -897,6 +845,7 @@ window.addEventListener('resize', () => {
   \*********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -935,6 +884,7 @@ function a11yAddDropdownToggleLabelsClick(items) {
   \***************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -968,6 +918,7 @@ function a11yAddDropdownToggleLabels(items) {
   \****************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -1445,6 +1396,7 @@ function a11yDropdownMenuKeyboardNavigationClick(items, focusableElements) {
   \**********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -1928,6 +1880,7 @@ function a11yDropdownMenuKeyboardNavigation(items, focusableElements) {
   \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -1981,6 +1934,7 @@ function a11yFocusTrap(e) {
   \************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -1999,6 +1953,7 @@ function addMultipleEventListeners(element, events, handler) {
   \**************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -2070,6 +2025,7 @@ function calculateBurgerMenuPosition() {
   \****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -2109,6 +2065,7 @@ function calculateDropdownToggleHeight() {
   \**********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -2154,6 +2111,7 @@ function checkForSubmenuOverflow(items) {
   \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -2220,6 +2178,7 @@ function closeSubMenuHandler(items) {
   \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -2267,6 +2226,7 @@ function closeSubMenu(li) {
   \***********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -2325,6 +2285,7 @@ function convertDropdownMenuItems(items) {
   \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -2426,6 +2387,7 @@ function dropdownMenuOnHover(items) {
   \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -2455,6 +2417,7 @@ const isOutOfViewport = function (elem) {
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -2526,11 +2489,9 @@ const backToTop = () => {
 /*!*************************************************!*\
   !*** ./src/styles/gutenberg-editor-styles.scss ***!
   \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nHookWebpackError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nUndefined mixin.\n\u001b[34m   ╷\u001b[0m\n\u001b[34m13 │\u001b[0m       \u001b[31m@include button-size-small()\u001b[0m;\n\u001b[34m   │\u001b[0m \u001b[31m      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\u001b[0m\n\u001b[34m   ╵\u001b[0m\n  src/styles/gutenberg/layout/_button.scss 13:7  @import\n  src/styles/gutenberg-editor-styles.scss 35:9   root stylesheet\n    at tryRunOrWebpackError (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/HookWebpackError.js:86:9)\n    at __webpack_require_module__ (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5301:12)\n    at __webpack_require__ (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5258:18)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5330:20\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3485:9)\n    at done (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3527:9)\n    at Hook.eval [as callAsync] (eval at create (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/Hook.js:18:14)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5236:43\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3482:9)\n    at timesSync (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3463:5)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5198:16\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3485:9)\n    at timesSync (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3463:5)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5166:15\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3485:9)\n    at done (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3527:9)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5112:8\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:3531:6\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/HookWebpackError.js:67:2\n    at Hook.eval [as callAsync] (eval at create (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at Cache.store (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Cache.js:111:20)\n    at ItemCacheFacade.store (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/CacheFacade.js:141:15)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:3530:11\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Cache.js:95:34\n    at Array.<anonymous> (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/cache/MemoryCachePlugin.js:45:13)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Cache.js:95:19\n    at Hook.eval [as callAsync] (eval at create (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:19:1)\n    at Cache.get (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Cache.js:79:18)\n    at ItemCacheFacade.get (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/CacheFacade.js:115:15)\n    at Compilation._codeGenerationModule (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:3498:9)\n    at codeGen (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5100:11)\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3482:9)\n    at timesSync (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3463:5)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5130:14\n    at processQueue (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/util/processAsyncTree.js:61:4)\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)\n-- inner error --\nError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nUndefined mixin.\n\u001b[34m   ╷\u001b[0m\n\u001b[34m13 │\u001b[0m       \u001b[31m@include button-size-small()\u001b[0m;\n\u001b[34m   │\u001b[0m \u001b[31m      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\u001b[0m\n\u001b[34m   ╵\u001b[0m\n  src/styles/gutenberg/layout/_button.scss 13:7  @import\n  src/styles/gutenberg-editor-styles.scss 35:9   root stylesheet\n    at Object.<anonymous> (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/src/styles/gutenberg-editor-styles.scss:1:7)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/javascript/JavascriptModulesPlugin.js:494:10\n    at Hook.eval [as call] (eval at create (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/HookCodeFactory.js:19:10), <anonymous>:7:1)\n    at Hook.CALL_DELEGATE [as _call] (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/Hook.js:14:14)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5303:39\n    at tryRunOrWebpackError (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/HookWebpackError.js:81:7)\n    at __webpack_require_module__ (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5301:12)\n    at __webpack_require__ (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5258:18)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5330:20\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3485:9)\n    at done (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3527:9)\n    at Hook.eval [as callAsync] (eval at create (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/Hook.js:18:14)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5236:43\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3482:9)\n    at timesSync (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3463:5)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5198:16\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3485:9)\n    at timesSync (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3463:5)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5166:15\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3485:9)\n    at done (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3527:9)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5112:8\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:3531:6\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/HookWebpackError.js:67:2\n    at Hook.eval [as callAsync] (eval at create (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at Cache.store (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Cache.js:111:20)\n    at ItemCacheFacade.store (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/CacheFacade.js:141:15)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:3530:11\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Cache.js:95:34\n    at Array.<anonymous> (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/cache/MemoryCachePlugin.js:45:13)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Cache.js:95:19\n    at Hook.eval [as callAsync] (eval at create (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:19:1)\n    at Cache.get (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Cache.js:79:18)\n    at ItemCacheFacade.get (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/CacheFacade.js:115:15)\n    at Compilation._codeGenerationModule (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:3498:9)\n    at codeGen (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5100:11)\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3482:9)\n    at timesSync (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3463:5)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5130:14\n    at processQueue (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/util/processAsyncTree.js:61:4)\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)\n\nGenerated code for /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/src/styles/gutenberg-editor-styles.scss\n1 | throw new Error(\"Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\\nUndefined mixin.\\n\\u001b[34m   ╷\\u001b[0m\\n\\u001b[34m13 │\\u001b[0m       \\u001b[31m@include button-size-small()\\u001b[0m;\\n\\u001b[34m   │\\u001b[0m \\u001b[31m      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\u001b[0m\\n\\u001b[34m   ╵\\u001b[0m\\n  src/styles/gutenberg/layout/_button.scss 13:7  @import\\n  src/styles/gutenberg-editor-styles.scss 35:9   root stylesheet\");");
 
 /***/ }),
 
@@ -2538,11 +2499,9 @@ __webpack_require__.r(__webpack_exports__);
 /*!*******************************!*\
   !*** ./src/styles/style.scss ***!
   \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nHookWebpackError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nUndefined mixin.\n\u001b[34m   ╷\u001b[0m\n\u001b[34m17 │\u001b[0m       \u001b[31m@include button-size-small()\u001b[0m;\n\u001b[34m   │\u001b[0m \u001b[31m      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\u001b[0m\n\u001b[34m   ╵\u001b[0m\n  src/styles/layout/_forms.scss 17:7  @import\n  src/styles/style.scss 38:9          root stylesheet\n    at tryRunOrWebpackError (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/HookWebpackError.js:86:9)\n    at __webpack_require_module__ (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5301:12)\n    at __webpack_require__ (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5258:18)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5330:20\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3485:9)\n    at done (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3527:9)\n    at Hook.eval [as callAsync] (eval at create (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5236:43\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3482:9)\n    at timesSync (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3463:5)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5198:16\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3485:9)\n    at timesSync (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3463:5)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5166:15\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3485:9)\n    at done (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3527:9)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5112:8\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:3531:6\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/HookWebpackError.js:67:2\n    at Hook.eval [as callAsync] (eval at create (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at Cache.store (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Cache.js:111:20)\n    at ItemCacheFacade.store (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/CacheFacade.js:141:15)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:3530:11\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Cache.js:95:34\n    at Array.<anonymous> (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/cache/MemoryCachePlugin.js:45:13)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Cache.js:95:19\n    at Hook.eval [as callAsync] (eval at create (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:19:1)\n    at Cache.get (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Cache.js:79:18)\n    at ItemCacheFacade.get (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/CacheFacade.js:115:15)\n    at Compilation._codeGenerationModule (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:3498:9)\n    at codeGen (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5100:11)\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3482:9)\n    at timesSync (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3463:5)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5130:14\n    at processQueue (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/util/processAsyncTree.js:61:4)\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)\n-- inner error --\nError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nUndefined mixin.\n\u001b[34m   ╷\u001b[0m\n\u001b[34m17 │\u001b[0m       \u001b[31m@include button-size-small()\u001b[0m;\n\u001b[34m   │\u001b[0m \u001b[31m      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\u001b[0m\n\u001b[34m   ╵\u001b[0m\n  src/styles/layout/_forms.scss 17:7  @import\n  src/styles/style.scss 38:9          root stylesheet\n    at Object.<anonymous> (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/src/styles/style.scss:1:7)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/javascript/JavascriptModulesPlugin.js:494:10\n    at Hook.eval [as call] (eval at create (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/HookCodeFactory.js:19:10), <anonymous>:7:1)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5303:39\n    at tryRunOrWebpackError (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/HookWebpackError.js:81:7)\n    at __webpack_require_module__ (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5301:12)\n    at __webpack_require__ (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5258:18)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5330:20\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3485:9)\n    at done (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3527:9)\n    at Hook.eval [as callAsync] (eval at create (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5236:43\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3482:9)\n    at timesSync (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3463:5)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5198:16\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3485:9)\n    at timesSync (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3463:5)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5166:15\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3485:9)\n    at done (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3527:9)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5112:8\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:3531:6\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/HookWebpackError.js:67:2\n    at Hook.eval [as callAsync] (eval at create (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at Cache.store (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Cache.js:111:20)\n    at ItemCacheFacade.store (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/CacheFacade.js:141:15)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:3530:11\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Cache.js:95:34\n    at Array.<anonymous> (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/cache/MemoryCachePlugin.js:45:13)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Cache.js:95:19\n    at Hook.eval [as callAsync] (eval at create (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:19:1)\n    at Cache.get (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Cache.js:79:18)\n    at ItemCacheFacade.get (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/CacheFacade.js:115:15)\n    at Compilation._codeGenerationModule (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:3498:9)\n    at codeGen (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5100:11)\n    at symbolIterator (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3482:9)\n    at timesSync (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/neo-async/async.js:3463:5)\n    at /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/Compilation.js:5130:14\n    at processQueue (/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/webpack/lib/util/processAsyncTree.js:61:4)\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)\n\nGenerated code for /Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!/Applications/MAMP/htdocs/brantt_/brantt_ docker/wp-content/themes/brantt/src/styles/style.scss\n1 | throw new Error(\"Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\\nUndefined mixin.\\n\\u001b[34m   ╷\\u001b[0m\\n\\u001b[34m17 │\\u001b[0m       \\u001b[31m@include button-size-small()\\u001b[0m;\\n\\u001b[34m   │\\u001b[0m \\u001b[31m      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\u001b[0m\\n\\u001b[34m   ╵\\u001b[0m\\n  src/styles/layout/_forms.scss 17:7  @import\\n  src/styles/style.scss 38:9          root stylesheet\");");
 
 /***/ })
 
@@ -2572,42 +2531,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/chunk loaded */
-/******/ 	(() => {
-/******/ 		var deferred = [];
-/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
-/******/ 			if(chunkIds) {
-/******/ 				priority = priority || 0;
-/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
-/******/ 				deferred[i] = [chunkIds, fn, priority];
-/******/ 				return;
-/******/ 			}
-/******/ 			var notFulfilled = Infinity;
-/******/ 			for (var i = 0; i < deferred.length; i++) {
-/******/ 				var [chunkIds, fn, priority] = deferred[i];
-/******/ 				var fulfilled = true;
-/******/ 				for (var j = 0; j < chunkIds.length; j++) {
-/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
-/******/ 						chunkIds.splice(j--, 1);
-/******/ 					} else {
-/******/ 						fulfilled = false;
-/******/ 						if(priority < notFulfilled) notFulfilled = priority;
-/******/ 					}
-/******/ 				}
-/******/ 				if(fulfilled) {
-/******/ 					deferred.splice(i--, 1)
-/******/ 					var r = fn();
-/******/ 					if (r !== undefined) result = r;
-/******/ 				}
-/******/ 			}
-/******/ 			return result;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
@@ -2648,68 +2572,68 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		// no baseURI
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"index": 0,
-/******/ 			"./style-index": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/ 		
-/******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
-/******/ 			var [chunkIds, moreModules, runtime] = data;
-/******/ 			// add "moreModules" to the modules object,
-/******/ 			// then flag all "chunkIds" as loaded and fire callback
-/******/ 			var moduleId, chunkId, i = 0;
-/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
-/******/ 				for(moduleId in moreModules) {
-/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
-/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
-/******/ 					}
-/******/ 				}
-/******/ 				if(runtime) var result = runtime(__webpack_require__);
-/******/ 			}
-/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
-/******/ 			for(;i < chunkIds.length; i++) {
-/******/ 				chunkId = chunkIds[i];
-/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 					installedChunks[chunkId][0]();
-/******/ 				}
-/******/ 				installedChunks[chunkId] = 0;
-/******/ 			}
-/******/ 			return __webpack_require__.O(result);
-/******/ 		}
-/******/ 		
-/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkair_light"] = globalThis["webpackChunkair_light"] || [];
-/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
-/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
-/******/ 	})();
-/******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["./style-index"], () => (__webpack_require__("./src/index.js")))
-/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/ 	
+var __webpack_exports__ = {};
+// This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
+(() => {
+"use strict";
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.scss */ "./src/styles/style.scss");
+/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_style_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_gutenberg_editor_styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/gutenberg-editor-styles.scss */ "./src/styles/gutenberg-editor-styles.scss");
+/* harmony import */ var _styles_gutenberg_editor_styles_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_gutenberg_editor_styles_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var reframe_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reframe.js */ "./node_modules/reframe.js/dist/reframe.es.js");
+/* harmony import */ var _scripts_modules_external_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/modules/external-link */ "./src/scripts/modules/external-link.js");
+/* harmony import */ var _scripts_modules_anchors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/modules/anchors */ "./src/scripts/modules/anchors.js");
+/* harmony import */ var _scripts_modules_top__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scripts/modules/top */ "./src/scripts/modules/top.js");
+/* harmony import */ var _scripts_modules_a11y_skip_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./scripts/modules/a11y-skip-link */ "./src/scripts/modules/a11y-skip-link.js");
+/* harmony import */ var _scripts_modules_a11y_focus_search_field__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./scripts/modules/a11y-focus-search-field */ "./src/scripts/modules/a11y-focus-search-field.js");
+/* harmony import */ var _scripts_modules_navigation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./scripts/modules/navigation */ "./src/scripts/modules/navigation.js");
+/* eslint-disable max-len, no-param-reassign, no-unused-vars */
+/**
+ * Air theme JavaScript.
+ */
+
+
+
+// Import modules
+
+
+
+
+
+
+
+
+// Define Javascript is active by changing the body class
+document.body.classList.remove('no-js');
+document.body.classList.add('js');
+document.addEventListener('DOMContentLoaded', () => {
+  (0,_scripts_modules_anchors__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  (0,_scripts_modules_top__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  (0,_scripts_modules_external_link__WEBPACK_IMPORTED_MODULE_3__.styleExternalLinks)();
+  (0,_scripts_modules_external_link__WEBPACK_IMPORTED_MODULE_3__.initExternalLinkLabels)();
+  (0,_scripts_modules_a11y_skip_link__WEBPACK_IMPORTED_MODULE_6__["default"])();
+  (0,_scripts_modules_a11y_focus_search_field__WEBPACK_IMPORTED_MODULE_7__["default"])();
+
+  // Init navigation
+  // If you want to enable click based navigation, comment navDesktop() and uncomment navClick()
+  // Remember to enable styles in sass/navigation/navigation.scss
+  (0,_scripts_modules_navigation__WEBPACK_IMPORTED_MODULE_8__.navDesktop)();
+  // navClick();
+  (0,_scripts_modules_navigation__WEBPACK_IMPORTED_MODULE_8__.navMobile)();
+
+  // Uncomment if you like to use a sticky navigation
+  // navSticky();
+
+  // Fit video embeds to container
+  (0,reframe_js__WEBPACK_IMPORTED_MODULE_2__["default"])('.wp-has-aspect-ratio iframe');
+});
+})();
+
 /******/ })()
 ;
 //# sourceMappingURL=index.js.map
