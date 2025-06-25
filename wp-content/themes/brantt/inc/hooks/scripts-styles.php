@@ -67,9 +67,9 @@ function enqueue_theme_scripts() {
 /**
  * Enqueue script for posts' metabox
  */
-function enqueue_admin_script() {
+function enqueue_admin_script($hook) {
   if ($hook === 'edit.php') {
-      wp_enqueue_script('brantt-inline-edit',  get_theme_file_uri(  'build/admin.js' ), ['jquery'],  filemtime( get_theme_file_path(  'build/admin.js' ) ),
+      wp_enqueue_script('brantt-inline-edit',  get_theme_file_uri(  'build/admin.js' ), [],  filemtime( get_theme_file_path(  'build/admin.js' ) ),
         'all');
       wp_localize_script('brantt-inline-edit', 'branttMetaBoxAjax', [
           'ajax_url' => admin_url('admin-ajax.php'),
@@ -91,16 +91,3 @@ function get_asset_file( $filename ) {
 
   return "{$filetype}/{$env}/{$filename}";
 } // end get_asset_file
-
-add_action('admin_enqueue_scripts', function($hook) {
-    if ($hook === 'edit.php') {
-        wp_enqueue_script('brantt-inline-edit',  get_theme_file_uri(  'build/editor.js' ),
-    ['jquery'],
-    filemtime( get_theme_file_path(  'build/editor.js' ) ),
-    'all');
-        wp_localize_script('brantt-inline-edit', 'branttMetaBoxAjax', [
-            'ajax_url' => admin_url('admin-ajax.php'),
-            'nonce' => wp_create_nonce('brantt_save_meta')
-        ]);
-    }
-});

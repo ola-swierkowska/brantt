@@ -59,7 +59,7 @@ function brantt_show_featured_column( $column, $post_id ) {
 	if ( 'is_featured' === $column ) {
 
      $value = get_post_meta($post_id, '_is_featured', true);
-     $checked = checked( $value, 'yes' );
+     $checked = checked( $value, 'yes', false );
         echo '<input type="checkbox" class="brantt-featured-note" data-post-id="' . esc_attr($post_id) . '" value="' . esc_attr($value) . '"' . $checked . ' />';
 
 	}
