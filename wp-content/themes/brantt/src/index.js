@@ -21,6 +21,7 @@ document.body.classList.remove('no-js');
 document.body.classList.add('js');
 
 document.addEventListener('DOMContentLoaded', () => {
+
   initAnchors();
   backToTop();
   styleExternalLinks();
@@ -40,4 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Fit video embeds to container
   reframe('.wp-has-aspect-ratio iframe');
+
+
+
+
+
+   
 });

@@ -6,7 +6,9 @@
 :root {
   // Brand color pool
   --color-black: #000;
-  --color-blue-chalk: #ece6f2;
+  --color-navy: #1b3454;
+  --color-red: #ff4043;
+  --color-secondary: #22b4ab;
   --color-east-bay: #545773;
   --color-pattens-blue: #eaf1f8;
   --color-science-blue: #0049d1;
@@ -15,9 +17,9 @@
   --color-white: #fff;
 
   // Main element colors
-  --color-main: var(--color-valhalla);
-  --color-heading: var(--color-main);
-  --color-paragraph: var(--color-east-bay);
+  --color-main: var(--color-navy);
+  --color-heading: var(--color-navy);
+  --color-paragraph: var(--color-navy);
 
   // Modern link
   --color-link-text: var(--color-science-blue);
