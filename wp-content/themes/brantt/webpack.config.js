@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: './src/index.js',    // front-end
     editor: './src/gutenberg-editor.js',  // editor
+    admin: './src/admin.js',  // admin
   },
     plugins: [
     ...defaultConfig.plugins,
