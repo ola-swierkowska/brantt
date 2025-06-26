@@ -2,12 +2,12 @@
   "apiVersion": 2,
   "name": "brantt/recent-posts",
   "title": "Najnowsze posty",
-  "category": "widgets",
+  "category": "theme",
   "icon": "smiley",
   "description": "Najnowsze posty + najnowszy wyszczególniony post",
   "keywords": ["custom", "pole", "blok"],
   "version": "1.0.0",
-  "textdomain": "myplugin",
+  "textdomain": "brantt",
   "editorScriptMetadata": {
     "dependencies": ["wp-blocks", "wp-element", "wp-i18n", "wp-block-editor"]
   },

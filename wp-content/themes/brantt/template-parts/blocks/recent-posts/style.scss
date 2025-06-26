@@ -97,6 +97,7 @@
 
     .text-wrapper {
       padding: px-to-rem(30) px-to-rem(30) px-to-rem(75) px-to-rem(30);
+      border-radius: 0 0 px-to-rem(5) px-to-rem(5);
 
       @media (min-width: $container-desktop) {
         > h4,
