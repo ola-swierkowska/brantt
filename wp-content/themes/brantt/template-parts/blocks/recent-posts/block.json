@@ -11,18 +11,31 @@
   "editorScriptMetadata": {
     "dependencies": ["wp-blocks", "wp-element", "wp-i18n", "wp-block-editor"]
   },
-  "script": "file:../../../../build/block-recent-posts.js",
+  "script": "file:./build/index.js",
   "editorStyle": "file:./style.css",
   "style": "file:./style.css",
+  "render": "file:./render.php",
+  "supports": {
+    "color": {
+      "text": true,
+      "background": true
+    }
+  },
   "attributes": {
-    "content": {
-      "type": "string",
-      "source": "html",
-      "selector": "p"
-    },
-    "customText": {
+    "textarea1": {
       "type": "string",
       "default": ""
-    }
+    },
+    "textarea2": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonText": {
+      "type": "string",
+      "default": ""
+    },
+    "order": { "type": "string", "default": "desc" },
+    "textColor": { "type": "string" },
+    "backgroundColor": { "type": "string" }
   }
 }

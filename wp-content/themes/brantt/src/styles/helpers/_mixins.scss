@@ -11,7 +11,7 @@ $norm_vw_m: 430;
 $min_vw_m: 320;
 $max_vw_m: 1200;
 
-@function rem($sizeValue: 16) {
+@function px-to-rem($sizeValue: 16) {
   @return ($sizeValue / 16) * 1rem;
 }
 
@@ -42,9 +42,9 @@ $max_vw_m: 1200;
 //   $vw: calc($value / $norm_vw);
 
 //   @return clamp(
-//     rem(calc($vw * $min)),
+//     px-to-rem(calc($vw * $min)),
 //     calc($vw * 100vw),
-//     rem(calc($vw * $max_vw))
+//     px-to-rem(calc($vw * $max_vw))
 //   );
 // }
 @function fluid-d($value, $min-key: 'xl') {
@@ -59,8 +59,8 @@ $max_vw_m: 1200;
   }
 
   $vw: $value / $norm_vw;
-  $min-rem: rem(calc($vw * $min));
-  $max-rem: rem(calc($vw * $max_vw));
+  $min-rem: px-to-rem(calc($vw * $min));
+  $max-rem: px-to-rem(calc($vw * $max_vw));
 
   @return clamp($min-rem, calc($vw * 100vw), $max-rem);
 }
@@ -69,9 +69,9 @@ $max_vw_m: 1200;
   $vw: calc($value / $norm_vw_m);
 
   @return clamp(
-    rem(calc($vw * $min_vw_m)),
+    px-to-rem(calc($vw * $min_vw_m)),
     calc($vw * 100vw),
-    rem(calc($vw * $max_vw_m))
+    px-to-rem(calc($vw * $max_vw_m))
   );
 }
 

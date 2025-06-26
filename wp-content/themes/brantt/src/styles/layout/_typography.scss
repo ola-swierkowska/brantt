@@ -29,7 +29,6 @@ h6 {
   font-family: var(--typography-family-heading);
   font-weight: var(--typography-weight-heading);
   margin-bottom: var(--spacing-paragraphs-margin-block);
-  margin-top: var(--spacing-paragraphs-margin-block);
 }
 
 h2,
@@ -87,10 +86,8 @@ i {
   font-style: italic;
 }
 
-// Default paragraphs
 p {
-  margin-bottom: 2.9rem;
-  margin-top: 2.9rem;
+  line-height: 145%;
 }
 
 p:last-child {

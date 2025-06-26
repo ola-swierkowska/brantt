@@ -20,29 +20,29 @@
   // --typography-family-heading: var(--typography-family-heading);
 
   // Heading font sizes
-  --typography-size-hero: #{rem(52)};
-  --typography-size-h1: #{rem(52)};
-  --typography-size-h2: #{rem(48)};
-  --typography-size-h3: #{rem(26)};
-  --typography-size-h4: #{rem(22)};
-  --typography-size-h5: #{rem(16)};
-  --typography-size-h6: #{rem(14)};
+  --typography-size-hero: #{px-to-rem(52)};
+  --typography-size-h1: #{px-to-rem(52)};
+  --typography-size-h2: #{px-to-rem(48)};
+  --typography-size-h3: #{px-to-rem(26)};
+  --typography-size-h4: #{px-to-rem(22)};
+  --typography-size-h5: #{px-to-rem(16)};
+  --typography-size-h6: #{px-to-rem(14)};
 
   // Paragraph font sizes
-  --typography-size-12: #{rem(12)};
-  --typography-size-13: #{rem(13)};
-  --typography-size-14: #{rem(14)};
-  --typography-size-15: #{rem(15)};
-  --typography-size-16: #{rem(16)};
-  --typography-size-17: #{rem(17)};
-  --typography-size-18: #{rem(19)};
-  --typography-size-20: #{rem(20)};
-  --typography-size-22: #{rem(22)};
+  --typography-size-12: #{px-to-rem(12)};
+  --typography-size-13: #{px-to-rem(13)};
+  --typography-size-14: #{px-to-rem(14)};
+  --typography-size-15: #{px-to-rem(15)};
+  --typography-size-16: #{px-to-rem(16)};
+  --typography-size-17: #{px-to-rem(17)};
+  --typography-size-18: #{px-to-rem(19)};
+  --typography-size-20: #{px-to-rem(20)};
+  --typography-size-22: #{px-to-rem(22)};
 
   // Element font sizes
   --typography-paragraph-size: var(--typography-size-18);
-  --typography-nav-toggle-label-size: #{rem(15)};
-  --typography-captions-size: #{rem(15)};
+  --typography-nav-toggle-label-size: #{px-to-rem(15)};
+  --typography-captions-size: #{px-to-rem(15)};
 
   // Line-heights
   --typography-heading-line-height: 1.5;
@@ -59,19 +59,19 @@
 
   // Heading font sizes in mobile
   @include media-breakpoint-down(md) {
-    --typography-size-hero: #{rem(38)};
-    --typography-size-h1: #{rem(32)};
-    --typography-size-h2: #{rem(24)};
-    --typography-size-h3: #{rem(21)};
-    --typography-size-h4: #{rem(18)};
-    --typography-size-h5: #{rem(14)};
-    --typography-size-h6: #{rem(12)};
-    --typography-paragraph-size: #{rem(16)};
+    --typography-size-hero: #{px-to-rem(38)};
+    --typography-size-h1: #{px-to-rem(32)};
+    --typography-size-h2: #{px-to-rem(24)};
+    --typography-size-h3: #{px-to-rem(21)};
+    --typography-size-h4: #{px-to-rem(18)};
+    --typography-size-h5: #{px-to-rem(14)};
+    --typography-size-h6: #{px-to-rem(12)};
+    --typography-paragraph-size: #{px-to-rem(16)};
   }
 
   // Element font sizes in tiny phones like iPhone 5S
   @include media-breakpoint-down(sm) {
-    --typography-size-16: #{rem(14)};
-    --typography-nav-toggle-label-size: #{rem(13)};
+    --typography-size-16: #{px-to-rem(14)};
+    --typography-nav-toggle-label-size: #{px-to-rem(13)};
   }
 }

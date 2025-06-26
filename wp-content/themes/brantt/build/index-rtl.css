@@ -18,7 +18,7 @@ img {
   --color-black: #000;
   --color-navy: #1b3454;
   --color-red: #ff4043;
-  --color-secondary: #22b4ab;
+  --color-green: #22b4ab;
   --color-east-bay: #545773;
   --color-pattens-blue: #eaf1f8;
   --color-science-blue: #0049d1;
@@ -1254,6 +1254,34 @@ div[tabindex]:focus {
   display: none !important;
 }
 
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-green {
+  background-color: var(--color-green);
+}
+
+.color-red {
+  color: var(--color-red);
+}
+
+.color-green {
+  color: var(--color-green);
+}
+
+.p-6 {
+  padding: 4.0625rem;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
 .editor-styles-wrapper .alignleft > *,
 .article-content .alignleft > * {
   float: right;
@@ -1452,7 +1480,6 @@ p {
   font-family: var(--typography-family-heading);
   font-weight: var(--typography-weight-heading);
   margin-bottom: var(--spacing-paragraphs-margin-block);
-  margin-top: var(--spacing-paragraphs-margin-block);
 }
 .editor-styles-wrapper h2,
 .editor-styles-wrapper h3,
@@ -1496,8 +1523,7 @@ p {
   font-style: italic;
 }
 .editor-styles-wrapper p {
-  margin-bottom: 2.9rem;
-  margin-top: 2.9rem;
+  line-height: 145%;
 }
 .editor-styles-wrapper p:last-child {
   margin-bottom: 0;

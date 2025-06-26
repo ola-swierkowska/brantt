@@ -221,3 +221,11 @@ function brantt_register_block() {
   true
 );
 }
+
+function featured_media_url() {
+  register_rest_field('post', 'featured_media_url', [
+    'get_callback' => function($post) {
+      return get_the_post_thumbnail_url($post['id'], 'medium');
+    },
+  ]);
+}
