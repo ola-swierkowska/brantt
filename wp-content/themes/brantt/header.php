@@ -28,9 +28,7 @@ namespace Air_Light;
   <?php wp_body_open(); ?>
   <div id="page" class="site">
 
-    <header class="header">
-      <?php get_template_part( 'template-parts/header/branding' ); ?>
-      <?php get_template_part( 'template-parts/header/navigation' ); ?>
+    <header class="header d-flex">
     </header>
 
     <div class="site-content">

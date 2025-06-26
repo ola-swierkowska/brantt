@@ -2,11 +2,13 @@
 
 // Reset
 @import 'helpers/sanitize';
+@import 'variables/breakpoints';
 
 //npm
-@import 'bootstrap/scss/functions';
-@import 'bootstrap/scss/variables';
-@import 'bootstrap/scss/mixins';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/bootstrap';
 
 // Helpers
 @import 'helpers/animations';
@@ -15,7 +17,6 @@
 @import 'helpers/mixins';
 // Variables
 @import 'variables/colors';
-@import 'variables/breakpoints';
 @import 'variables/font-sizes';
 @import 'variables/typography';
 @import 'variables/forms';
@@ -59,4 +60,4 @@
 @import 'gutenberg/blocks';
 
 // Gutenberg formatting
-@import 'gutenberg/formatting';
+// @import 'gutenberg/formatting';

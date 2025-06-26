@@ -1,0 +1,41 @@
+{
+  "apiVersion": 2,
+  "name": "brantt/recent-posts",
+  "title": "Najnowsze posty",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Najnowsze posty + najnowszy wyszczególniony post",
+  "keywords": ["custom", "pole", "blok"],
+  "version": "1.0.0",
+  "textdomain": "myplugin",
+  "editorScriptMetadata": {
+    "dependencies": ["wp-blocks", "wp-element", "wp-i18n", "wp-block-editor"]
+  },
+  "script": "file:./build/index.js",
+  "editorStyle": "file:./style.css",
+  "style": "file:./style.css",
+  "render": "file:./render.php",
+  "supports": {
+    "color": {
+      "text": true,
+      "background": true
+    }
+  },
+  "attributes": {
+    "textarea1": {
+      "type": "string",
+      "default": ""
+    },
+    "textarea2": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonText": {
+      "type": "string",
+      "default": ""
+    },
+    "order": { "type": "string", "default": "desc" },
+    "textColor": { "type": "string" },
+    "backgroundColor": { "type": "string" }
+  }
+}

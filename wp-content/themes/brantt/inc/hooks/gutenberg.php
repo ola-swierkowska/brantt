@@ -10,71 +10,71 @@ namespace Air_Light;
 /**
  * Restrict blocks to only allowed blocks in the settings
  */
-function allowed_block_types( $allowed_blocks, $editor_context ) { // phpcs:ignore
+// function allowed_block_types( $allowed_blocks, $editor_context ) { // phpcs:ignore
 
-  // If no allowed blocks are defined or it is set to none, return an empty array
-  if ( empty( THEME_SETTINGS['allowed_blocks'] ) || 'none' === THEME_SETTINGS['allowed_blocks'] ) {
-    return [];
-  }
+//   // If no allowed blocks are defined or it is set to none, return an empty array
+//   if ( empty( THEME_SETTINGS['allowed_blocks'] ) || 'none' === THEME_SETTINGS['allowed_blocks'] ) {
+//     return [];
+//   }
 
-  // If the post type contains empty array or none, return an empty array for that post type post
-  if ( empty( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) || 'none' === THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) {
-    return [];
-  }
+//   // If the post type contains empty array or none, return an empty array for that post type post
+//   if ( empty( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) || 'none' === THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) {
+//     return [];
+//   }
 
-  $allowed_blocks = [];
-  $select_all = 'all' === THEME_SETTINGS['allowed_blocks'][ get_post_type() ] || ( is_array( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) && in_array( 'all', THEME_SETTINGS['allowed_blocks'][ get_post_type() ], true ) );
-  $acf_blocks = 'all-acf-blocks' === THEME_SETTINGS['allowed_blocks'][ get_post_type() ] || ( is_array( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) && in_array( 'all-acf-blocks', THEME_SETTINGS['allowed_blocks'][ get_post_type() ], true ) );
-  $core_blocks = 'all-core-blocks' === THEME_SETTINGS['allowed_blocks'][ get_post_type() ] || ( is_array( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) && in_array( 'all-core-blocks', THEME_SETTINGS['allowed_blocks'][ get_post_type() ], true ) );
+//   $allowed_blocks = [];
+//   $select_all = 'all' === THEME_SETTINGS['allowed_blocks'][ get_post_type() ] || ( is_array( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) && in_array( 'all', THEME_SETTINGS['allowed_blocks'][ get_post_type() ], true ) );
+//   $acf_blocks = 'all-acf-blocks' === THEME_SETTINGS['allowed_blocks'][ get_post_type() ] || ( is_array( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) && in_array( 'all-acf-blocks', THEME_SETTINGS['allowed_blocks'][ get_post_type() ], true ) );
+//   $core_blocks = 'all-core-blocks' === THEME_SETTINGS['allowed_blocks'][ get_post_type() ] || ( is_array( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) && in_array( 'all-core-blocks', THEME_SETTINGS['allowed_blocks'][ get_post_type() ], true ) );
 
-  // If post type block has been set to 'all-acf-blocks', return all ACF blocks, or if the array below it contains 'all-acf-blocks', return all ACF blocks
-  if ( $select_all || $acf_blocks ) {
+//   // If post type block has been set to 'all-acf-blocks', return all ACF blocks, or if the array below it contains 'all-acf-blocks', return all ACF blocks
+//   if ( $select_all || $acf_blocks ) {
 
-    // Add ACF blocks
-    if ( isset( THEME_SETTINGS['acf_blocks'] ) ) {
-      $allowed_blocks = [];
+//     // Add ACF blocks
+//     if ( isset( THEME_SETTINGS['acf_blocks'] ) ) {
+//       $allowed_blocks = [];
 
-      foreach ( THEME_SETTINGS['acf_blocks'] as $custom_block ) {
-        $allowed_blocks[] = 'acf/' . $custom_block['name'];
-      }
-    }
-  }
+//       foreach ( THEME_SETTINGS['acf_blocks'] as $custom_block ) {
+//         $allowed_blocks[] = 'acf/' . $custom_block['name'];
+//       }
+//     }
+//   }
 
-  // If post type block has been set to 'all-core-blocks', return all core blocks, or if the array below it contains 'all-core-blocks', return all core blocks
-  if ( $select_all || $core_blocks ) {
-    $registered_blocks = \WP_Block_Type_Registry::get_instance()->get_all_registered();
+//   // If post type block has been set to 'all-core-blocks', return all core blocks, or if the array below it contains 'all-core-blocks', return all core blocks
+//   if ( $select_all || $core_blocks ) {
+//     $registered_blocks = \WP_Block_Type_Registry::get_instance()->get_all_registered();
 
-    // Remove all but core/* blocks from array
-    $core_blocks = array_filter( $registered_blocks, function( $block ) {
-      return strpos( $block->name, 'core/' ) === 0;
-    });
+//     // Remove all but core/* blocks from array
+//     $core_blocks = array_filter( $registered_blocks, function( $block ) {
+//       return strpos( $block->name, 'core/' ) === 0;
+//     });
 
-    // Allow filtering core blocks with full block data
-    $core_blocks = apply_filters( 'air_light_allowed_core_blocks_obj', $core_blocks );
+//     // Allow filtering core blocks with full block data
+//     $core_blocks = apply_filters( 'air_light_allowed_core_blocks_obj', $core_blocks );
 
-    $core_blocks = array_map(function( $block ) {
-      return $block->name;
-    }, $core_blocks );
+//     $core_blocks = array_map(function( $block ) {
+//       return $block->name;
+//     }, $core_blocks );
 
-    // Get array values
-    $core_blocks = array_values( $core_blocks );
+//     // Get array values
+//     $core_blocks = array_values( $core_blocks );
 
-    // Allow filtering core blocks before merging allowed blocks
-    $core_blocks = apply_filters( 'air_light_allowed_core_blocks', $core_blocks );
+//     // Allow filtering core blocks before merging allowed blocks
+//     $core_blocks = apply_filters( 'air_light_allowed_core_blocks', $core_blocks );
 
-    // Add blocks defined on top of core blocks
-    if ( is_array( $core_blocks ) ) {
-      $allowed_blocks = array_merge( $allowed_blocks, $core_blocks );
-    }
-  }
+//     // Add blocks defined on top of core blocks
+//     if ( is_array( $core_blocks ) ) {
+//       $allowed_blocks = array_merge( $allowed_blocks, $core_blocks );
+//     }
+//   }
 
-  // Add blocks defined on top of core blocks
-  if ( is_array( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) ) {
-    $allowed_blocks = array_merge( $allowed_blocks, THEME_SETTINGS['allowed_blocks'][ get_post_type() ] );
-  }
+//   // Add blocks defined on top of core blocks
+//   if ( is_array( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) ) {
+//     $allowed_blocks = array_merge( $allowed_blocks, THEME_SETTINGS['allowed_blocks'][ get_post_type() ] );
+//   }
 
-  return $allowed_blocks;
-} // end allowed_block_types
+//   return $allowed_blocks;
+// } // end allowed_block_types
 
 /**
  * Check whether to use classic or block editor for a certain post type as defined in the settings
@@ -208,4 +208,24 @@ function block_editor_title_input_styles() {
   }
   ';
   wp_add_inline_style( 'block-editor-styles',  $styles );
+}
+
+function brantt_register_block() {
+    register_block_type( dirname(__DIR__, 2) . '/template-parts/blocks/recent-posts' );
+
+    wp_register_script(
+  'brantt-block-recent-posts',
+  get_template_directory() . '/template-parts/blocks/recent-posts/block-recent-posts.js',
+  ['wp-blocks', 'wp-element', 'wp-i18n', 'wp-block-editor'],
+  filemtime(get_template_directory() . '/template-parts/blocks/recent-posts/block-recent-posts.js'),
+  true
+);
+}
+
+function featured_media_url() {
+  register_rest_field('post', 'featured_media_url', [
+    'get_callback' => function($post) {
+      return get_the_post_thumbnail_url($post['id'], 'medium');
+    },
+  ]);
 }

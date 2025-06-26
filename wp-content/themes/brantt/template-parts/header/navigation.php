@@ -11,7 +11,7 @@ namespace Air_Light;
 
 <nav id="nav" class="nav-primary nav-menu" aria-label="<?php echo esc_html( get_default_localization( 'Main navigation' ) ); ?>">
 
-  <button aria-haspopup="true" aria-expanded="false" aria-controls="nav" id="nav-toggle" class="nav-toggle" type="button" aria-label="<?php echo esc_html( get_default_localization( 'Open main menu' ) ); ?>">
+  <button aria-haspopup="true" aria-expanded="false" aria-controls="nav" id="nav-toggle" class="nav-toggle" type="button" >
     <span class="hamburger" aria-hidden="true"></span>
   </button>
 
