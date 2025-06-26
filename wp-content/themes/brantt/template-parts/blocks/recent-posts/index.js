@@ -9,12 +9,9 @@ wp.blocks.registerBlockType('brantt/recent-posts', {
    apiVersion: 2,
   title: 'Recent Posts',
   category: 'common',
-  // attributes: { /* your attributes… */ },
   example: {},
   edit({ attributes, setAttributes }) {
     const { textarea1, textarea2, buttonText, order } = attributes;
-
-    // 1) Get the featured post
     const featured = useSelect(
       (select) =>
         select('core').getEntityRecords('postType', 'post', {
@@ -27,7 +24,6 @@ wp.blocks.registerBlockType('brantt/recent-posts', {
       [order]
     );
 
-    // 2) Get the next 3 posts (exclude the featured ID)
     const featuredId = featured?.[0]?.id;
     const latest = useSelect(
       (select) =>
