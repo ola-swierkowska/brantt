@@ -118,7 +118,17 @@
   opacity: 1;
 }
 
+.wp-block-brantt-recent-posts .recent-posts-block__featured {
+  display: flex;
+  margin: 1.875rem 0;
+}
 .wp-block-brantt-recent-posts .recent-posts-block__featured img {
   width: auto;
   height: auto;
+  display: block;
+}
+.wp-block-brantt-recent-posts .recent-posts-block__latest {
+  width: 31%;
+  display: inline-block;
+  margin: 1.875rem 0;
 }/*# sourceMappingURL=style.css.map */
