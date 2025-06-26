@@ -71,23 +71,23 @@ wp.blocks.registerBlockType('brantt/recent-posts', {
       </PanelBody>
     </InspectorControls>
         {featured && featured[0] && (
-            <a href={featured[0].link} className="d-flex recent-posts-block__featured">
+            <a href={featured[0].link} className="recent-posts-block__featured">
               <img src={featured[0].featured_media_url} alt="" />
               <div>
                 <h5>Featured Post</h5>
                 <h3>{featured[0].title.rendered}</h3>
-                <p>{featured[0].excerpt.rendered}</p>
+                <p dangerouslySetInnerHTML={{ __html: featured[0].excerpt.rendered.replace(/<\/?p>/g, '') }} />
               </div>
             </a>
           )}
 
           {latest && latest.length > 0 && (
-            <div className="d-flex">
+            <div>
               {latest.map((p) => (
-                <a key={p.id} href={p.link} className="recent-posts__latest">
+                <a key={p.id} href={p.link} className="recent-posts-block__latest col-xl-4">
                   <img src={p.featured_media_url} alt="" />
                   <h3>{p.title.rendered}</h3>
-                  <p>{p.excerpt.rendered}</p>
+                  <p dangerouslySetInnerHTML={{ __html: p.excerpt.rendered.replace(/<\/?p>/g, '') }} />
                 </a>
               ))}
             </div>
