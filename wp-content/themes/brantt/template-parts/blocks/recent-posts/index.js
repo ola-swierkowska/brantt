@@ -6,9 +6,6 @@ import { useSelect } from '@wordpress/data';
 
 
 wp.blocks.registerBlockType('brantt/recent-posts', {
-   apiVersion: 2,
-  title: 'Recent Posts',
-  category: 'common',
   example: {},
   edit({ attributes, setAttributes }) {
     const { textarea1, textarea2, buttonText, order } = attributes;

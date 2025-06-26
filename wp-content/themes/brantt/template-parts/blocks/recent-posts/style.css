@@ -80,6 +80,7 @@
 }
 .recent-posts-block__latest .text-wrapper {
   padding: 1.875rem 1.875rem 4.6875rem 1.875rem;
+  border-radius: 0 0 0.3125rem 0.3125rem;
 }
 @media (min-width: 1200px) {
   .recent-posts-block__latest .text-wrapper > h4,
